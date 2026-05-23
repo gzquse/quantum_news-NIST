@@ -2,8 +2,10 @@ name: PhotonBox Weekly Translator
 
 on:
   schedule:
-    # Monday 06:00 UTC = Monday 14:00 China time.
-    - cron: '0 6 * * 1'
+    # Saturday 06:00 UTC = Saturday 14:00 China time.
+    # 光子盒 typically publishes the weekly around Saturday noon China time;
+    # this fires 2h after to give the album API time to surface the new article.
+    - cron: '0 6 * * 6'
   workflow_dispatch:
     inputs:
       force:
