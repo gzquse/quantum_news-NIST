@@ -2,10 +2,12 @@ name: PhotonBox Weekly Translator
 
 on:
   schedule:
-    # Saturday 06:00 UTC = Saturday 14:00 China time.
-    # 光子盒 typically publishes the weekly around Saturday noon China time;
-    # this fires 2h after to give the album API time to surface the new article.
-    - cron: '0 6 * * 6'
+    # Fire Saturday AND Sunday at 13:00 UTC.
+    # 光子盒 publishes the weekly at ~10:55 UTC (18:55 China time), typically
+    # Saturday but occasionally Sunday. Firing both days at 13:00 UTC catches
+    # either day with a ~2h buffer after publication. State.json dedup ensures
+    # we don't double-send: if Saturday's fire already delivered, Sunday's exits early.
+    - cron: '0 13 * * 6,0'
   workflow_dispatch:
     inputs:
       force:
