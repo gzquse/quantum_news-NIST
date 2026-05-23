@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+launchd.out.log
+launchd.err.log
+state.json.bak

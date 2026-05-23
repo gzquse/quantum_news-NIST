@@ -1,0 +1,53 @@
+name: PhotonBox Weekly Translator
+
+on:
+  schedule:
+    # Monday 06:00 UTC = Monday 14:00 China time.
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Re-send even if the latest article is already in state.json'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - run: pip install -r requirements.txt
+
+      - name: Run translator
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+        run: |
+          if [[ "${{ inputs.force }}" == "true" ]]; then
+            python photonbox_weekly.py --force
+          else
+            python photonbox_weekly.py
+          fi
+
+      - name: Commit state + cache if updated
+        run: |
+          if [[ -n "$(git status --porcelain state.json cache/)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add state.json cache/
+            git commit -m "chore: update weekly state and translation cache"
+            git push
+          fi
