@@ -40,7 +40,8 @@ jobs:
           AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
           AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
         run: |
-          if [[ "${{ inputs.force }}" == "true" ]]; then
+          force_input="${{ github.event.inputs.force }}"
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${force_input}" != "false" ]]; then
             python photonbox_weekly.py --force
           else
             python photonbox_weekly.py
