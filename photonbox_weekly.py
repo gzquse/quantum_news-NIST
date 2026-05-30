@@ -24,6 +24,7 @@ Flags:
 from __future__ import annotations
 
 import argparse
+import html
 import hashlib
 import json
 import os
@@ -61,6 +62,17 @@ def log(msg: str) -> None:
     print(f"[photonbox] {msg}", flush=True)
 
 
+def unescape_html_entities(value: str, max_rounds: int = 5) -> str:
+    """Decode nested HTML entities (e.g. &amp;amp; -> &)."""
+    out = value
+    for _ in range(max_rounds):
+        nxt = html.unescape(out)
+        if nxt == out:
+            break
+        out = nxt
+    return out
+
+
 def fetch_latest_from_album(
     biz: str = DEFAULT_ALBUM_BIZ,
     album_id: str = DEFAULT_ALBUM_ID,
@@ -92,7 +104,7 @@ def fetch_latest_from_album(
             continue
         return {
             "title": a["title"],
-            "url": a["url"].replace("&amp;", "&"),
+            "url": unescape_html_entities(a["url"]),
             "account": ACCOUNT_NAME,
             "create_time": a.get("create_time"),
         }
@@ -481,7 +493,7 @@ def save_state(path: Path, state: dict) -> None:
 
 
 def canonicalize(url: str) -> str:
-    parts = urlsplit(url)
+    parts = urlsplit(unescape_html_entities(url))
     host = parts.netloc.lower()
     path = parts.path.rstrip("/")
     if path.startswith("/s/"):
