@@ -63,7 +63,7 @@ def log(msg: str) -> None:
 
 
 def unescape_html_entities(value: str, max_rounds: int = 5) -> str:
-    """Decode nested HTML entities (e.g. &amp;amp; -> &)."""
+    """Decode nested HTML entities (e.g. &amp;amp; -> &amp; -> &)."""
     out = value
     for _ in range(max_rounds):
         nxt = html.unescape(out)
