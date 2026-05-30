@@ -97,7 +97,7 @@ python photonbox_weekly.py --url 'http://mp.weixin.qq.com/s?...'
 
 - **Discovery via the WeChat album API**, not Sogou search. Sogou's WeChat index for
   光子盒 is years stale (frozen at September 2022 as of this writing), so it was unusable.
-  The album endpoint returns reverse-chronological results from the canonical source.
+  The script selects the matching item with the newest `create_time` from the canonical source.
 
 - **Claude API uses streaming**. Non-streaming `messages.create()` timed out at ~10 min on
   long inputs; streaming handles the typical 30K-char → 80K-char expansion cleanly.

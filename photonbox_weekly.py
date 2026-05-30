@@ -68,8 +68,8 @@ def fetch_latest_from_album(
 ) -> dict | None:
     """Hit the album JSON API and return the newest matching item.
 
-    Returns {title, url, account, create_time} or None. The album endpoint is
-    publicly accessible and returns reverse-chronological results.
+    Returns {title, url, account, create_time} or None. We select by max
+    create_time so we always pick the latest issue even if response order shifts.
     """
     params = {
         "__biz": biz,
@@ -87,16 +87,25 @@ def fetch_latest_from_album(
     log(f"Album returned {len(arts)} newest items")
     for a in arts[:5]:
         log(f"  - {a.get('title', '')[:80]}")
-    for a in arts:
-        if title_must_contain and title_must_contain not in a.get("title", ""):
-            continue
-        return {
-            "title": a["title"],
-            "url": a["url"].replace("&amp;", "&"),
-            "account": ACCOUNT_NAME,
-            "create_time": a.get("create_time"),
-        }
-    return None
+    matches = [
+        a for a in arts if not title_must_contain or title_must_contain in a.get("title", "")
+    ]
+    if not matches:
+        return None
+
+    def _safe_create_time(item: dict) -> int:
+        try:
+            return int(item.get("create_time") or 0)
+        except (TypeError, ValueError):
+            return 0
+
+    newest = max(matches, key=_safe_create_time)
+    return {
+        "title": newest["title"],
+        "url": newest["url"].replace("&amp;", "&"),
+        "account": ACCOUNT_NAME,
+        "create_time": newest.get("create_time"),
+    }
 
 
 def search_sogou_for_latest_weekly(
