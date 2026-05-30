@@ -34,7 +34,7 @@ import time
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import parse_qs, urlencode, urljoin, urlsplit
 
 import markdown
 import requests
@@ -481,7 +481,22 @@ def save_state(path: Path, state: dict) -> None:
 
 
 def canonicalize(url: str) -> str:
-    return url.split("?")[0]
+    parts = urlsplit(url)
+    host = parts.netloc.lower()
+    path = parts.path.rstrip("/")
+    if path.startswith("/s/"):
+        return f"https://{host}{path}"
+    if path == "/s":
+        q = parse_qs(parts.query, keep_blank_values=False)
+        keep = {}
+        for k in ("__biz", "mid", "idx", "sn"):
+            vals = q.get(k, [])
+            if len(vals) == 1 and vals[0]:
+                keep[k] = vals[0]
+        if keep:
+            ordered = [(k, keep[k]) for k in ("__biz", "mid", "idx", "sn") if k in keep]
+            return f"https://{host}{path}?{urlencode(ordered)}"
+    return f"https://{host}{path}"
 
 
 def main() -> int:
