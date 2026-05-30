@@ -37,9 +37,9 @@ cron every Saturday afternoon (China time) — no servers to maintain, no manual
   firing both days catches either with a 2h buffer. `state.json` dedup ensures the
   second firing exits early if the first already sent.
 - **Manual trigger**: `gh workflow run weekly.yml -f force=true` or via the GitHub UI's
-  "Run workflow" button. The `force` input bypasses `state.json` dedup; default is
-  `true` so manual triggers always send. Scheduled cron runs do not pass `force`,
-  so they always respect dedup.
+  "Run workflow" button. Manual runs send with `--force` unless you explicitly set
+  `force=false`, so they bypass `state.json` dedup by default. Scheduled cron runs
+  do not pass `force`, so they always respect dedup.
 
 ## Required secrets
 
