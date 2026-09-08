@@ -1,4 +1,15 @@
-# PhotonBox Weekly Translator
+# PhotonBox Weekly Translator + NIST PQC History Map
+
+Two independent weekly GitHub Actions jobs live in this repo:
+
+1. **PhotonBox Weekly Translator** (below) – translates the 光子盒 Chinese quantum weekly and emails it.
+2. **[NIST PQC History Map](#nist-pqc-history-map-weekly)** – a plain-English, link-rich timeline of NIST's
+   post-quantum cryptography standardisation, refreshed and emailed every Monday. See
+   [`NIST_PQC_HISTORY.md`](NIST_PQC_HISTORY.md) for the current map.
+
+---
+
+## PhotonBox Weekly Translator
 
 Auto-translates the [光子盒](https://mp.weixin.qq.com/) (PhotonBox) Chinese quantum-computing
 weekly report into English and emails it to a list of recipients. Runs on a GitHub Actions
@@ -29,6 +40,12 @@ cron every Saturday afternoon (China time) — no servers to maintain, no manual
 | `state.json` | Last-sent URL + title + timestamp; used for dedup. |
 | `.env.example` | Template for local development; real values go in `.env` (gitignored). |
 | `run_weekly.sh` | Wrapper for local manual runs (sources `.env`, invokes the script). |
+| `nist_pqc_weekly.py` | NIST PQC history-map job (see below). |
+| `nist_pqc/timeline.json` | Hand-curated NIST PQC timeline, status board, watch list, glossary. |
+| `nist_pqc/updates.json` | NIST items discovered automatically by the weekly job (grows over time). |
+| `nist_pqc/state.json` | Seen URLs, watch-list HTTP status, page hashes, last-sent week. |
+| `NIST_PQC_HISTORY.md` | Rendered map – regenerated and committed weekly. |
+| `.github/workflows/nist_weekly.yml` | Monday cron + manual trigger for the NIST job. |
 
 ## Schedule
 
@@ -122,3 +139,75 @@ python photonbox_weekly.py --url 'http://mp.weixin.qq.com/s?...'
   and update the constants at the top of `photonbox_weekly.py`.
 - The workflow commits to `main` via `github-actions[bot]`. If you protect `main`,
   add an exception or route the commit elsewhere.
+
+---
+
+## NIST PQC History Map (weekly)
+
+`nist_pqc_weekly.py` keeps a layman-friendly history of NIST's post-quantum cryptography
+(PQC) work – from the 2015 workshop and the 2016 call for proposals through FIPS 203/204/205,
+HQC, the transition draft (IR 8547), SP 800-227/230 and the additional-signatures rounds – and
+emails it **every Monday to `zguo@lightriderinc.com` only** (recipient is fixed by the
+`NIST_RECEIVER_EMAIL` secret, defaulting to that address when unset).
+
+### What the job does each week
+
+1. **Pull NIST news.** Parses the official CSRC news lists for the
+   [PQC project](https://csrc.nist.gov/projects/post-quantum-cryptography/news) and the
+   [additional signatures track](https://csrc.nist.gov/Projects/pqc-dig-sig/news). Anything not
+   in `nist_pqc/state.json` is new. Parsing is deliberately tolerant (any `/News/<year>/…` link
+   plus the nearest date string) so small NIST layout changes don't break it; if a page yields
+   zero items the email carries a ⚠️ warning instead of silently reporting "no news".
+2. **Probe the watch list.** URLs that *should not exist yet* (draft/final FIPS 206, FIPS 207
+   for HQC, final IR 8547, final SP 800-230/133r3, the 2027 conference). A flip from 404 → 200
+   is reported as "Now live: …" and annotates the status board.
+3. **Detect silent page edits.** Hashes the main text of the PQC home page, the selected-
+   algorithms table, the Round 3 candidates page and the timeline page. When one changes, a
+   sentence-level diff is summarised (this is how e.g. HAWK's withdrawal shows up – NIST edited
+   the page without a news post).
+4. **Explain in plain English.** For each new item the NIST page is fetched, document links
+   (PDFs, publication pages) are extracted, and Claude writes a 2–4 sentence layman summary plus
+   "why it matters". Facts come only from the NIST page text; the original link is always shown.
+   New items are appended to `nist_pqc/updates.json`, so the map grows over time.
+5. **Render + send.** Curated timeline + auto-discovered updates → `NIST_PQC_HISTORY.md`
+   (committed) and an HTML email with: *What changed this week* (or an explicit "no NIST
+   changes"), *Where things stand* status board, the full timeline, *What's coming next*, and a
+   glossary. The email goes out every week even when nothing changed. `last_sent_week` in the
+   state prevents double-sends within one ISO week.
+
+### Editing the map by hand
+
+Everything curated lives in `nist_pqc/timeline.json`:
+
+- `events[]` – `{date, era, title, plain, links[]}`. `era` is one of the ids in `eras[]`.
+- `status_board[]` – one row per standard/document; `id` lets watch-list hits annotate it.
+- `watch_list[]` – `{what, probe, affects}`; `probe` is the URL that will exist one day.
+- `watch_pages[]` – pages whose text is hashed for silent-edit detection.
+- `glossary[]` – plain-English terms.
+
+Auto-discovered items are in `nist_pqc/updates.json`; delete an entry there (and its URL from
+`state.json → seen_urls`) to make the job re-discover and re-summarise it.
+
+### Running locally
+
+```bash
+set -a; source .env; set +a
+python nist_pqc_weekly.py --dry-run --html-out /tmp/nist.html   # no email, no writes
+python nist_pqc_weekly.py --no-email                            # update md/state only
+python nist_pqc_weekly.py --force                               # send now
+python nist_pqc_weekly.py --record-dir tests/fixtures           # snapshot live pages
+python nist_pqc_weekly.py --fixture-dir tests/fixtures --dry-run --today 2026-09-08  # offline
+```
+
+Without `ANTHROPIC_API_KEY` the job still works – new items get a raw excerpt instead of a
+Claude summary.
+
+### Schedule & secrets
+
+- Cron `0 13 * * 1` (Monday 13:00 UTC / 09:00 US Eastern). Manual runs default to `--force`;
+  tick *dry_run* to preview without emailing or committing. The rendered email is always
+  uploaded as a workflow artifact (`nist-pqc-email-preview`).
+- Reuses `ANTHROPIC_API_KEY`, `SENDER_EMAIL`, `AZURE_*` from the PhotonBox job. Optional:
+  `NIST_RECEIVER_EMAIL` (comma-separated) – leave unset to send only to zguo@lightriderinc.com.
+- Both workflows commit to `main`. They run on different days, and the NIST job does
+  `git pull --rebase` before pushing, so they never clobber each other's commits.

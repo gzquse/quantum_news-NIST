@@ -1,0 +1,578 @@
+{
+  "_about": "Curated NIST post-quantum cryptography (PQC) history map. Hand-maintained; every entry links to the original NIST page and, where one exists, the original document (PDF). Newly discovered NIST items are appended automatically by nist_pqc_weekly.py into updates.json, not here.",
+  "eras": [
+    {
+      "id": "why",
+      "title": "Why this matters (the problem NIST set out to solve)",
+      "plain": "Today's internet security (RSA, elliptic-curve crypto) relies on math problems that a large quantum computer could solve quickly. Nobody has built one that big yet, but data encrypted today could be recorded and cracked later ('harvest now, decrypt later'). NIST's job was to pick new, quantum-safe algorithms and turn them into official U.S. standards that the whole world tends to adopt."
+    },
+    {
+      "id": "foundations",
+      "title": "2015–2017 · Foundations: studying the problem and launching a public competition"
+    },
+    {
+      "id": "rounds",
+      "title": "2017–2022 · The competition: 82 submissions whittled down over three rounds"
+    },
+    {
+      "id": "standards",
+      "title": "2022–2024 · Winners chosen, drafts written, first standards published"
+    },
+    {
+      "id": "expansion",
+      "title": "2024–2026 · Filling the gaps: backup algorithms, transition plan, extra signatures"
+    },
+    {
+      "id": "next",
+      "title": "What NIST has said is coming next"
+    }
+  ],
+  "events": [
+    {
+      "date": "2015-04-02",
+      "era": "foundations",
+      "title": "First NIST workshop on 'Cybersecurity in a Post-Quantum World'",
+      "plain": "NIST gathers researchers to ask: how worried should we be about quantum computers breaking encryption, and what should we do? This is the informal starting gun.",
+      "links": [
+        {
+          "label": "Workshop page",
+          "url": "https://csrc.nist.gov/events/2015/workshop-on-cybersecurity-in-a-post-quantum-world"
+        }
+      ]
+    },
+    {
+      "date": "2016-04-28",
+      "era": "foundations",
+      "title": "NIST IR 8105 – 'Report on Post-Quantum Cryptography'",
+      "plain": "NIST's first formal report. In plain terms it says: the threat is real enough that we should start replacing today's public-key crypto now, because swapping algorithms across the whole internet takes a decade or more.",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2016/NIST-Released-NISTIR-8105,-Report-on-Post-Quantum"
+        },
+        {
+          "label": "Report (PDF)",
+          "url": "https://nvlpubs.nist.gov/nistpubs/ir/2016/NIST.IR.8105.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2016-12-20",
+      "era": "foundations",
+      "title": "Official Call for Proposals – the PQC 'competition' opens",
+      "plain": "NIST invites cryptographers worldwide to submit candidate algorithms for two jobs: (1) key exchange / encryption (a 'KEM') and (2) digital signatures. NIST calls it a 'process', not a competition, because more than one winner is allowed.",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2016/Public-Key-Post-Quantum-Cryptographic-Algorithms"
+        },
+        {
+          "label": "Call for Proposals (PDF)",
+          "url": "https://csrc.nist.gov/CSRC/media/Projects/Post-Quantum-Cryptography/documents/call-for-proposals-final-dec-2016.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2017-12-21",
+      "era": "rounds",
+      "title": "Round 1 begins – 69 complete submissions accepted (out of 82 received)",
+      "plain": "The field is announced. Over the next year, academics and NIST try to break each other's designs; several fall within weeks.",
+      "links": [
+        {
+          "label": "Round 1 submissions",
+          "url": "https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization/round-1-submissions"
+        }
+      ]
+    },
+    {
+      "date": "2018-04-11",
+      "era": "rounds",
+      "title": "First PQC Standardization Conference (Fort Lauderdale, FL)",
+      "plain": "Submitters present their algorithms in person; the community starts comparing speed, key sizes and security arguments side by side.",
+      "links": [
+        {
+          "label": "Workshops & timeline",
+          "url": "https://csrc.nist.gov/Projects/post-quantum-cryptography/workshops-and-timeline"
+        }
+      ]
+    },
+    {
+      "date": "2019-01-30",
+      "era": "rounds",
+      "title": "Round 2 – 26 candidates advance (NIST IR 8240)",
+      "plain": "NIST cuts the field from 69 to 26 and publishes a report explaining why each one stayed or went.",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2019/pqc-standardization-process-2nd-round-candidates"
+        },
+        {
+          "label": "Status report IR 8240 (PDF)",
+          "url": "https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.8240.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2020-07-22",
+      "era": "rounds",
+      "title": "Round 3 – 7 finalists and 8 alternates (NIST IR 8309)",
+      "plain": "Finalists are the ones NIST thinks could be standardized soon; 'alternates' are promising but need more study. Lattice-based schemes (Kyber, Dilithium, Falcon, NTRU, SABER) dominate.",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2020/pqc-third-round-candidate-announcement"
+        },
+        {
+          "label": "Status report IR 8309 (PDF)",
+          "url": "https://nvlpubs.nist.gov/nistpubs/ir/2020/NIST.IR.8309.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2022-07-05",
+      "era": "standards",
+      "title": "Winners announced: CRYSTALS-Kyber, CRYSTALS-Dilithium, Falcon, SPHINCS+ (NIST IR 8413)",
+      "plain": "After nearly six years, NIST picks one algorithm for encryption/key exchange (Kyber) and three for signatures (Dilithium as the main one, Falcon for when small signatures matter, SPHINCS+ as a differently-built backup). Four more encryption candidates (BIKE, Classic McEliece, HQC, SIKE) go into a 4th round as possible backups. SIKE was broken by researchers a month later and withdrew.",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2022/pqc-candidates-to-be-standardized-and-round-4"
+        },
+        {
+          "label": "Status report IR 8413 (PDF)",
+          "url": "https://nvlpubs.nist.gov/nistpubs/ir/2022/NIST.IR.8413-upd1.pdf"
+        },
+        {
+          "label": "Selected algorithms",
+          "url": "https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization/selected-algorithms"
+        }
+      ]
+    },
+    {
+      "date": "2022-09-06",
+      "era": "standards",
+      "title": "NIST asks for MORE signature algorithms (the 'additional signatures' track)",
+      "plain": "Two of the three chosen signature schemes use the same kind of math (structured lattices). NIST wants insurance in case that math is ever broken, plus schemes with very short signatures, so it opens a second call just for signatures.",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2022/request-additional-pqc-digital-signature-schemes"
+        },
+        {
+          "label": "Call for proposals (PDF)",
+          "url": "https://csrc.nist.gov/csrc/media/Projects/pqc-dig-sig/documents/call-for-proposals-dig-sig-sept-2022.pdf"
+        },
+        {
+          "label": "Project page",
+          "url": "https://csrc.nist.gov/projects/pqc-dig-sig"
+        }
+      ]
+    },
+    {
+      "date": "2023-07-17",
+      "era": "expansion",
+      "title": "Additional signatures Round 1 – 40 candidates accepted",
+      "plain": "The second signature contest starts with 40 entries built on a wider variety of math (codes, multivariate equations, isogenies, hash/MPC tricks).",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2023/additional-pqc-digital-signature-candidates"
+        },
+        {
+          "label": "Round 1 candidates",
+          "url": "https://csrc.nist.gov/Projects/pqc-dig-sig/round-1-additional-signatures"
+        }
+      ]
+    },
+    {
+      "date": "2023-08-24",
+      "era": "standards",
+      "title": "Draft standards FIPS 203, 204, 205 released for public comment",
+      "plain": "The winners get their official names: Kyber → ML-KEM (FIPS 203), Dilithium → ML-DSA (FIPS 204), SPHINCS+ → SLH-DSA (FIPS 205). Anyone can send comments until Nov 22, 2023. Falcon's standard (FIPS 206, 'FN-DSA') is promised later.",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2023/three-draft-fips-for-post-quantum-cryptography"
+        }
+      ]
+    },
+    {
+      "date": "2024-08-13",
+      "era": "standards",
+      "title": "★ FIPS 203, 204, 205 become official U.S. standards",
+      "plain": "The big milestone. Secretary of Commerce approves the first three post-quantum standards. NIST's message: 'go ahead and start using these three' – don't wait. ML-KEM protects data in transit (think HTTPS), ML-DSA and SLH-DSA prove who signed something (software updates, certificates).",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2024/postquantum-cryptography-fips-approved"
+        },
+        {
+          "label": "NIST press release (plain-English)",
+          "url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards"
+        },
+        {
+          "label": "FIPS 203 ML-KEM (PDF)",
+          "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf"
+        },
+        {
+          "label": "FIPS 204 ML-DSA (PDF)",
+          "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf"
+        },
+        {
+          "label": "FIPS 205 SLH-DSA (PDF)",
+          "url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.205.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2024-10-25",
+      "era": "expansion",
+      "title": "Additional signatures Round 2 – 14 candidates advance (NIST IR 8528)",
+      "plain": "The 40 extra signature candidates are cut to 14: CROSS, FAEST, HAWK, LESS, MAYO, Mirath, MQOM, PERK, QR-UOV, RYDE, SDitH, SNOVA, SQIsign, UOV.",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2024/pqc-digital-signature-second-round-announcement"
+        },
+        {
+          "label": "Status report IR 8528",
+          "url": "https://csrc.nist.gov/pubs/ir/8528/final"
+        },
+        {
+          "label": "IR 8528 (PDF)",
+          "url": "https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8528.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2024-11-12",
+      "era": "expansion",
+      "title": "Draft NIST IR 8547 – the transition timetable (still a draft)",
+      "plain": "The 'when do we have to switch?' document. Draft plan: today's 112-bit-strength RSA/ECC (e.g. RSA-2048, P-256) becomes 'deprecated' (discouraged) after 2030, and ALL quantum-vulnerable public-key crypto is 'disallowed' after 2035. Comments closed Jan 10, 2025; a final version has not been published as of this map.",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2024/draft-nist-ir-8547-is-available-for-comment"
+        },
+        {
+          "label": "Publication page",
+          "url": "https://csrc.nist.gov/pubs/ir/8547/ipd"
+        },
+        {
+          "label": "Draft IR 8547 (PDF)",
+          "url": "https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2025-01-07",
+      "era": "expansion",
+      "title": "Draft SP 800-227 – how to use KEMs safely",
+      "plain": "A how-to guide for engineers using ML-KEM and similar 'key encapsulation' tools correctly, including mixing them with today's crypto ('hybrid' mode). Comments until March 7, 2025; a NIST workshop on KEM guidance followed on Feb 25–26, 2025.",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2025/draft-sp-800-227-is-available-for-comment"
+        },
+        {
+          "label": "KEM guidance workshop",
+          "url": "https://csrc.nist.gov/Events/2025/workshop-on-guidance-for-kems"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-11",
+      "era": "expansion",
+      "title": "HQC chosen as the backup encryption algorithm (NIST IR 8545)",
+      "plain": "From the 4th round, NIST picks HQC as a second, differently-built KEM in case a flaw is ever found in ML-KEM's lattice math (HQC uses error-correcting codes instead). NIST said a draft standard would follow, with a final version in roughly two years (~2027). BIKE and Classic McEliece were not selected.",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2025/hqc-announced-as-a-4th-round-selection"
+        },
+        {
+          "label": "Status report IR 8545",
+          "url": "https://csrc.nist.gov/pubs/ir/8545/final"
+        },
+        {
+          "label": "IR 8545 (PDF)",
+          "url": "https://nvlpubs.nist.gov/nistpubs/ir/2025/NIST.IR.8545.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2025-09-18",
+      "era": "expansion",
+      "title": "SP 800-227 finalized – 'Recommendations for Key-Encapsulation Mechanisms'",
+      "plain": "The KEM how-to guide becomes final. Useful for anyone deciding how to plug ML-KEM into real products.",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2025/nist-publishes-sp-800-227"
+        },
+        {
+          "label": "Publication page",
+          "url": "https://csrc.nist.gov/pubs/sp/800/227/final"
+        },
+        {
+          "label": "SP 800-227 (PDF)",
+          "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-227.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2025-09-24",
+      "era": "expansion",
+      "title": "Sixth PQC Standardization Conference (Gaithersburg, MD)",
+      "plain": "Three days of talks on the 14 extra signature candidates, HQC, and real-world migration lessons.",
+      "links": [
+        {
+          "label": "Conference page",
+          "url": "https://csrc.nist.gov/Events/2025/6th-pqc-standardization-conference"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-13",
+      "era": "expansion",
+      "title": "Draft SP 800-230 – smaller, faster SLH-DSA variants for firmware/software signing",
+      "plain": "Adds six new SLH-DSA settings that make signatures smaller and faster to check, in exchange for a limit of about 16 million signatures per key (instead of effectively unlimited). Aimed at signing software and firmware. Comments closed June 12, 2026.",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2026/nist-releases-draft-sp-800-230"
+        },
+        {
+          "label": "Publication page",
+          "url": "https://csrc.nist.gov/pubs/sp/800/230/ipd"
+        },
+        {
+          "label": "Draft SP 800-230 (PDF)",
+          "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-230.ipd.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-17",
+      "era": "expansion",
+      "title": "Draft SP 800-133 Rev. 3 – key generation guidance updated for PQC",
+      "plain": "NIST's general rulebook on how to generate cryptographic keys gets a revision that adds the new PQC algorithms, covers storing ML-KEM keys as compact 'seeds', and addresses hybrid classical+PQC setups. Comments closed June 16, 2026.",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2026/recommendation-for-cryptographic-key-generation"
+        },
+        {
+          "label": "Publication page",
+          "url": "https://csrc.nist.gov/pubs/sp/800/133/r3/ipd"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "era": "expansion",
+      "title": "Additional signatures Round 3 – 9 candidates advance (NIST IR 8610)",
+      "plain": "The extra-signature contest narrows from 14 to 9: FAEST, HAWK, MAYO, MQOM, QR-UOV, SDitH, SNOVA, SQIsign, UOV. Teams may submit 'tweaks'; NIST expects this round to take about two years, with a 7th PQC conference planned for late spring / early summer 2027.",
+      "links": [
+        {
+          "label": "Announcement",
+          "url": "https://csrc.nist.gov/News/2026/nist-advances-9-candidates-to-the-3rd-round-of-pqc"
+        },
+        {
+          "label": "Status report IR 8610",
+          "url": "https://csrc.nist.gov/pubs/ir/8610/final"
+        },
+        {
+          "label": "IR 8610 (PDF)",
+          "url": "https://doi.org/10.6028/NIST.IR.8610"
+        },
+        {
+          "label": "Round 3 candidates",
+          "url": "https://csrc.nist.gov/projects/pqc-dig-sig/round-3-additional-signatures"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "era": "expansion",
+      "title": "HAWK withdrawn from the additional-signatures race – 8 Round 3 candidates remain",
+      "plain": "NIST's Round 3 page now notes that the HAWK team has withdrawn their lattice-based signature scheme from the process (NIST's page was updated July 29, 2026; NIST did not post a dated news item). That leaves eight candidates: FAEST, MAYO, MQOM, QR-UOV, SDitH, SNOVA, SQIsign and UOV – all built on non-lattice math, which is exactly the diversity NIST wanted from this track.",
+      "links": [
+        {
+          "label": "Round 3 candidates page (see HAWK note)",
+          "url": "https://csrc.nist.gov/projects/pqc-dig-sig/round-3-additional-signatures"
+        }
+      ]
+    }
+  ],
+  "status_board": [
+    {
+      "item": "FIPS 203 – ML-KEM (encryption / key exchange, from Kyber)",
+      "status": "Final standard",
+      "since": "2024-08-13",
+      "url": "https://csrc.nist.gov/pubs/fips/203/final",
+      "id": "fips203"
+    },
+    {
+      "item": "FIPS 204 – ML-DSA (digital signatures, from Dilithium)",
+      "status": "Final standard",
+      "since": "2024-08-13",
+      "url": "https://csrc.nist.gov/pubs/fips/204/final",
+      "id": "fips204"
+    },
+    {
+      "item": "FIPS 205 – SLH-DSA (backup signatures, from SPHINCS+)",
+      "status": "Final standard",
+      "since": "2024-08-13",
+      "url": "https://csrc.nist.gov/pubs/fips/205/final",
+      "id": "fips205"
+    },
+    {
+      "item": "FIPS 206 – FN-DSA (compact signatures, from Falcon)",
+      "status": "Selected 2022; standard still pending – NIST lists it as 'FIPS coming soon'",
+      "since": "2022-07-05",
+      "url": "https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization/selected-algorithms",
+      "id": "fips206"
+    },
+    {
+      "item": "HQC (backup encryption / KEM)",
+      "status": "Selected March 2025; draft standard pending, final expected ~2027",
+      "since": "2025-03-11",
+      "url": "https://csrc.nist.gov/News/2025/hqc-announced-as-a-4th-round-selection",
+      "id": "hqc"
+    },
+    {
+      "item": "NIST IR 8547 – transition timeline (2030 deprecate / 2035 disallow)",
+      "status": "Draft only (Nov 2024); final not yet published",
+      "since": "2024-11-12",
+      "url": "https://csrc.nist.gov/pubs/ir/8547/ipd",
+      "id": "ir8547"
+    },
+    {
+      "item": "SP 800-227 – KEM usage guidance",
+      "status": "Final",
+      "since": "2025-09-18",
+      "url": "https://csrc.nist.gov/pubs/sp/800/227/final",
+      "id": "sp800-227"
+    },
+    {
+      "item": "SP 800-230 – extra SLH-DSA parameter sets",
+      "status": "Draft; comments closed June 2026",
+      "since": "2026-04-13",
+      "url": "https://csrc.nist.gov/pubs/sp/800/230/ipd",
+      "id": "sp800-230"
+    },
+    {
+      "item": "Additional signature schemes",
+      "status": "Round 3 – 9 advanced May 2026, HAWK since withdrawn (8 remain); ~2 years of evaluation",
+      "since": "2026-07-29",
+      "url": "https://csrc.nist.gov/projects/pqc-dig-sig/round-3-additional-signatures",
+      "id": "addsig"
+    }
+  ],
+  "watch_list": [
+    {
+      "what": "Draft FIPS 206 (FN-DSA / Falcon) published for comment",
+      "probe": "https://csrc.nist.gov/pubs/fips/206/ipd",
+      "affects": "fips206"
+    },
+    {
+      "what": "Final FIPS 206 (FN-DSA / Falcon)",
+      "probe": "https://csrc.nist.gov/pubs/fips/206/final",
+      "affects": "fips206"
+    },
+    {
+      "what": "Draft FIPS 207 (expected to be HQC) published for comment",
+      "probe": "https://csrc.nist.gov/pubs/fips/207/ipd",
+      "affects": "hqc"
+    },
+    {
+      "what": "Final FIPS 207 (HQC)",
+      "probe": "https://csrc.nist.gov/pubs/fips/207/final",
+      "affects": "hqc"
+    },
+    {
+      "what": "Final NIST IR 8547 transition timeline",
+      "probe": "https://csrc.nist.gov/pubs/ir/8547/final",
+      "affects": "ir8547"
+    },
+    {
+      "what": "Final SP 800-230 (extra SLH-DSA parameter sets)",
+      "probe": "https://csrc.nist.gov/pubs/sp/800/230/final",
+      "affects": "sp800-230"
+    },
+    {
+      "what": "Final SP 800-133 Rev. 3 (key generation incl. PQC)",
+      "probe": "https://csrc.nist.gov/pubs/sp/800/133/r3/final"
+    },
+    {
+      "what": "7th PQC Standardization Conference (planned spring/summer 2027)",
+      "probe": "https://csrc.nist.gov/Events/2027/7th-pqc-standardization-conference",
+      "affects": "addsig"
+    }
+  ],
+  "watch_pages": [
+    {
+      "what": "PQC project home page",
+      "url": "https://csrc.nist.gov/projects/post-quantum-cryptography"
+    },
+    {
+      "what": "Selected algorithms (FIPS status table)",
+      "url": "https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization/selected-algorithms"
+    },
+    {
+      "what": "Additional signatures – Round 3 candidates",
+      "url": "https://csrc.nist.gov/projects/pqc-dig-sig/round-3-additional-signatures"
+    },
+    {
+      "what": "PQC workshops & timeline",
+      "url": "https://csrc.nist.gov/Projects/post-quantum-cryptography/workshops-and-timeline"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "PQC (post-quantum cryptography)",
+      "plain": "Encryption and signature methods designed to stay secure even against a future large quantum computer."
+    },
+    {
+      "term": "KEM (key-encapsulation mechanism)",
+      "plain": "A way for two computers to agree on a secret key over the open internet. It's the 'handshake' step before the actual encrypted conversation. ML-KEM and HQC are KEMs."
+    },
+    {
+      "term": "Digital signature",
+      "plain": "A mathematical stamp proving who created a message or file and that it wasn't altered. Used in software updates and website certificates. ML-DSA, SLH-DSA, FN-DSA are signature schemes."
+    },
+    {
+      "term": "FIPS",
+      "plain": "Federal Information Processing Standard – an official U.S. government standard. Once something is a FIPS, U.S. agencies (and many vendors worldwide) are expected to use it."
+    },
+    {
+      "term": "SP 800-xxx",
+      "plain": "NIST Special Publication – detailed guidance on how to use the standards properly."
+    },
+    {
+      "term": "NIST IR",
+      "plain": "NIST Internal/Interagency Report – explains NIST's reasoning, e.g., why candidates were kept or dropped."
+    },
+    {
+      "term": "IPD",
+      "plain": "Initial Public Draft – a first draft open for public comment; not yet official."
+    },
+    {
+      "term": "Lattice-based",
+      "plain": "The family of math behind ML-KEM, ML-DSA and FN-DSA. Fast and well-studied, but NIST wants backups built on different math just in case."
+    },
+    {
+      "term": "Deprecated vs. disallowed",
+      "plain": "Deprecated = still allowed but discouraged and being phased out. Disallowed = no longer permitted for federal use."
+    },
+    {
+      "term": "Harvest now, decrypt later",
+      "plain": "The fear that adversaries record encrypted traffic today and decrypt it years from now once quantum computers exist. This is why the switch can't wait."
+    },
+    {
+      "term": "Hybrid",
+      "plain": "Using a traditional algorithm and a PQC algorithm together, so you're safe as long as at least one holds up."
+    }
+  ]
+}

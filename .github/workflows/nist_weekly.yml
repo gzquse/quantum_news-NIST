@@ -1,0 +1,77 @@
+name: NIST PQC History Map (weekly)
+
+on:
+  schedule:
+    # Every Monday 13:00 UTC (09:00 US Eastern / 06:00 Pacific). NIST posts on
+    # weekdays, so a Monday run summarises the previous week. Deliberately a
+    # different day from the PhotonBox workflow (Sat/Sun) so the two never race
+    # to push to main.
+    - cron: '0 13 * * 1'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Send even if an email already went out this ISO week'
+        type: boolean
+        default: true
+      dry_run:
+        description: 'Fetch + render only; no email, no commit'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-commits
+  cancel-in-progress: false
+
+jobs:
+  nist-pqc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - run: pip install -r requirements.txt
+
+      - name: Build map + email
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          # Only Martin gets this one. Override via the NIST_RECEIVER_EMAIL secret if needed;
+          # the script falls back to zguo@lightriderinc.com when it is unset.
+          NIST_RECEIVER_EMAIL: ${{ secrets.NIST_RECEIVER_EMAIL }}
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+        run: |
+          args=()
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            [[ "${{ github.event.inputs.dry_run }}" == "true" ]] && args+=(--dry-run)
+            [[ "${{ github.event.inputs.force }}" != "false" ]] && args+=(--force)
+          fi
+          python nist_pqc_weekly.py "${args[@]}" --html-out nist_pqc/latest_email.html
+
+      - name: Upload email preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: nist-pqc-email-preview
+          path: nist_pqc/latest_email.html
+          retention-days: 30
+
+      - name: Commit state + map if updated
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          rm -f nist_pqc/latest_email.html
+          if [[ -n "$(git status --porcelain nist_pqc/ NIST_PQC_HISTORY.md)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add nist_pqc/ NIST_PQC_HISTORY.md
+            git commit -m "chore(nist-pqc): weekly history map refresh"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push
+          fi
