@@ -147,8 +147,8 @@ python photonbox_weekly.py --url 'http://mp.weixin.qq.com/s?...'
 `nist_pqc_weekly.py` keeps a layman-friendly history of NIST's post-quantum cryptography
 (PQC) work – from the 2015 workshop and the 2016 call for proposals through FIPS 203/204/205,
 HQC, the transition draft (IR 8547), SP 800-227/230 and the additional-signatures rounds – and
-emails it **every Monday to `zguo@lightriderinc.com` only** (recipient is fixed by the
-`NIST_RECEIVER_EMAIL` secret, defaulting to that address when unset).
+emails it **every Monday to Martin (`zguo@`) and Anthony (`alawrence@lightriderinc.com`)**
+(recipients come from the `NIST_RECEIVER_EMAIL` secret, defaulting to those two when unset).
 
 ### What the job does each week
 
@@ -208,6 +208,6 @@ Claude summary.
   tick *dry_run* to preview without emailing or committing. The rendered email is always
   uploaded as a workflow artifact (`nist-pqc-email-preview`).
 - Reuses `ANTHROPIC_API_KEY`, `SENDER_EMAIL`, `AZURE_*` from the PhotonBox job. Optional:
-  `NIST_RECEIVER_EMAIL` (comma-separated) – leave unset to send only to zguo@lightriderinc.com.
+  `NIST_RECEIVER_EMAIL` (comma-separated) – leave unset to send to zguo@ and alawrence@lightriderinc.com.
 - Both workflows commit to `main`. They run on different days, and the NIST job does
   `git pull --rebase` before pushing, so they never clobber each other's commits.

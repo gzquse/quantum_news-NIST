@@ -13,7 +13,7 @@ Every week this script:
    New items are appended to nist_pqc/updates.json so the map grows over time.
 4. Renders the full history map – curated timeline (nist_pqc/timeline.json) +
    automatically discovered updates – as Markdown (NIST_PQC_HISTORY.md) and as
-   an HTML email, and sends the email (default recipient: zguo@lightriderinc.com).
+   an HTML email, and sends the email (default recipients: zguo@ and alawrence@lightriderinc.com).
 
 The email is sent every week even when nothing changed, with a clear
 "What changed this week" section that says so.
@@ -21,7 +21,7 @@ The email is sent every week even when nothing changed, with a clear
 Environment variables (same secrets as photonbox_weekly.py):
     ANTHROPIC_API_KEY     - Claude API key (optional in --dry-run; falls back to raw excerpt)
     SENDER_EMAIL          - From: address (noreply@lightriderinc.com)
-    NIST_RECEIVER_EMAIL   - recipients, comma-separated (default: zguo@lightriderinc.com)
+    NIST_RECEIVER_EMAIL   - recipients, comma-separated (default: zguo@,alawrence@lightriderinc.com)
     AZURE_TENANT_ID / AZURE_CLIENT_ID / AZURE_CLIENT_SECRET - Graph API send
     CLAUDE_MODEL          - override model (default: claude-sonnet-4-6)
 
@@ -58,7 +58,7 @@ TIMELINE_FILE = DATA_DIR / "timeline.json"
 UPDATES_FILE = DATA_DIR / "updates.json"
 STATE_FILE = Path(os.environ.get("NIST_STATE_FILE", DATA_DIR / "state.json"))
 MARKDOWN_OUT = Path(os.environ.get("NIST_MARKDOWN_OUT", BASE_DIR / "NIST_PQC_HISTORY.md"))
-DEFAULT_RECIPIENT = "zguo@lightriderinc.com"
+DEFAULT_RECIPIENTS = "zguo@lightriderinc.com,alawrence@lightriderinc.com"
 DEFAULT_MODEL = "claude-sonnet-4-6"
 
 NEWS_SOURCES = [
@@ -688,7 +688,7 @@ def render_html(timeline: dict, updates: list[dict], this_week: list[dict], prob
 
 def send_email(subject: str, text_md: str, html_body: str) -> list[str]:
     sender = os.environ["SENDER_EMAIL"]
-    raw = os.environ.get("NIST_RECEIVER_EMAIL") or DEFAULT_RECIPIENT
+    raw = os.environ.get("NIST_RECEIVER_EMAIL") or DEFAULT_RECIPIENTS
     recipients = [r.strip() for r in raw.split(",") if r.strip()]
     payload = {"sender": sender, "recipients": recipients, "subject": subject, "text": text_md, "html": html_body}
     if os.environ.get("AZURE_CLIENT_SECRET"):
