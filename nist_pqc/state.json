@@ -1,0 +1,183 @@
+{
+  "seen_urls": {
+    "https://csrc.nist.gov/News/2026/nist-advances-9-candidates-to-the-3rd-round-of-pqc": {
+      "title": "NIST Advances 9 Candidates to the 3rd Round of PQC",
+      "date": "2026-05-14",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2026/recommendation-for-cryptographic-key-generation": {
+      "title": "Recommendation for Cryptographic Key Generation",
+      "date": "2026-04-17",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2026/nist-releases-draft-sp-800-230": {
+      "title": "NIST Releases Draft SP 800-230",
+      "date": "2026-04-13",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2025/nist-publishes-sp-800-227": {
+      "title": "NIST Publishes SP 800-227",
+      "date": "2025-09-18",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2025/hqc-announced-as-a-4th-round-selection": {
+      "title": "HQC Announced as a 4th Round Selection",
+      "date": "2025-03-11",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2025/draft-sp-800-227-is-available-for-comment": {
+      "title": "Draft SP 800-227 is Available for Comment",
+      "date": "2025-01-07",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2024/draft-nist-ir-8547-is-available-for-comment": {
+      "title": "Draft NIST IR 8547 is Available for Comment",
+      "date": "2024-11-12",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2024/postquantum-cryptography-fips-approved": {
+      "title": "Post-Quantum Cryptography FIPS Approved",
+      "date": "2024-08-13",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2023/three-draft-fips-for-post-quantum-cryptography": {
+      "title": "Three Draft FIPS for Post-Quantum Cryptography",
+      "date": "2023-08-24",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2022/pqc-candidates-to-be-standardized-and-round-4": {
+      "title": "Announcing PQC Candidates to be Standardized, Plus Fourth Round Candidates",
+      "date": "2022-07-05",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2020/pqc-third-round-candidate-announcement": {
+      "title": "PQC Third Round Candidate Announcement",
+      "date": "2020-07-22",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2019/nist-publishes-pqc-round-1-report-nistir-8240": {
+      "title": "NIST Publishes NISTIR 8240: PQC Round 1 Status Report",
+      "date": "2019-01-31",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2019/pqc-standardization-process-2nd-round-candidates": {
+      "title": "PQC Standardization Process: Second Round Candidate Announcement",
+      "date": "2019-01-30",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2016/Public-Key-Post-Quantum-Cryptographic-Algorithms": {
+      "title": "Public-Key Post-Quantum Cryptographic Algorithms: Nominations",
+      "date": "2016-12-20",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2016/Post-Quantum-Cryptography-Proposed-Requirements": {
+      "title": "Post-Quantum Cryptography: Proposed Requirements & Eval Criteria",
+      "date": "2016-08-02",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2016/NIST-Released-NISTIR-8105,-Report-on-Post-Quantum": {
+      "title": "NIST Released NISTIR 8105, Report on Post-Quantum Cryptography",
+      "date": "2016-04-28",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2016/NIST-Announce-the-Release-of-DRAFT-NISTIR-8105": {
+      "title": "NIST Announce the Release of DRAFT NISTIR 8105",
+      "date": "2016-02-03",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2024/pqc-digital-signature-second-round-announcement": {
+      "title": "PQC Digital Signature Second Round Announcement",
+      "date": "2024-10-25",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2023/additional-pqc-digital-signature-candidates": {
+      "title": "Additional PQC Digital Signature Candidates Announced",
+      "date": "2023-07-17",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    },
+    "https://csrc.nist.gov/News/2022/request-additional-pqc-digital-signature-schemes": {
+      "title": "Request for Additional PQC Digital Signature Schemes",
+      "date": "2022-09-06",
+      "first_seen": "2026-09-08",
+      "seeded": true
+    }
+  },
+  "watch": {
+    "https://csrc.nist.gov/pubs/fips/206/ipd": {
+      "status": 404,
+      "checked": "2026-09-08"
+    },
+    "https://csrc.nist.gov/pubs/fips/206/final": {
+      "status": 404,
+      "checked": "2026-09-08"
+    },
+    "https://csrc.nist.gov/pubs/fips/207/ipd": {
+      "status": 404,
+      "checked": "2026-09-08"
+    },
+    "https://csrc.nist.gov/pubs/fips/207/final": {
+      "status": 404,
+      "checked": "2026-09-08"
+    },
+    "https://csrc.nist.gov/pubs/ir/8547/final": {
+      "status": 404,
+      "checked": "2026-09-08"
+    },
+    "https://csrc.nist.gov/pubs/sp/800/230/final": {
+      "status": 404,
+      "checked": "2026-09-08"
+    },
+    "https://csrc.nist.gov/pubs/sp/800/133/r3/final": {
+      "status": 404,
+      "checked": "2026-09-08"
+    },
+    "https://csrc.nist.gov/Events/2027/7th-pqc-standardization-conference": {
+      "status": 404,
+      "checked": "2026-09-08"
+    }
+  },
+  "pages": {
+    "https://csrc.nist.gov/projects/post-quantum-cryptography": {
+      "sha256": "1bcb0ad8f076c300c0a86cbf6eeba101c01311243fb505c1371c7bae1d60835f",
+      "checked": "2026-09-08",
+      "text": "You are viewing this page in an unauthorized frame window. This is a potential security issue, you are being redirected to https://csrc.nist.gov . Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( Lock Locked padlock icon ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites. Information Technology Laboratory Computer Security Resource Center Projects Post-Quantum Cryptography PQC Share to Facebook Share to X Share to LinkedIn Share ia Email Project Links Overview FAQs News & Updates Events Publications Presentations Overview Short URL: https://www.nist.gov/pqcrypto For a plain-language introduction to post-quantum cryptography, see What Is Post-Quantum Cryptography? PQC Standards | Migration to PQC | Ongoing PQC Standardization Process NIST’s Post-Quantum Cryptography (PQC) project leads the national and global effort to secure electronic information against the future threat of quantum computers—machines that may be years or decades away but could eventually break many of today’s widely used cryptographic systems. Through a multi-year international competition involving industry, academia, and governments, NIST released the principal three PQC standards in 2024 and is developing additional standards to serve as backups or alternatives. Organizations should begin applying these standards now to migrate their systems to quantum-resistant cryptography. Alongside these standards, NIST conducts foundational cryptographic research; collaborates with industry and federal partners to guide organizations preparing for PQC migration; and administers the Cryptographic Module Validation Program to promote validated, trustworthy cryptography. These efforts both protect data and information systems and sustain U.S. leadership in quantum information science and cryptographic innovation. PQC Standards In August 2024, NIST released its principal PQC standards (as Federal Information Processing Standards, or FIPS), specifying key establishment and digital signature schemes based on candidates evaluated and selected through this multi-year process. FIPS 203 Module-Lattice-Based Key-Encapsulation Mechanism Standard (ML-KEM) FIPS 204 Module-Lattice-Based Digital Signature Standard (ML-DSA) FIPS 205 Stateless Hash-Based Digital Signature Standard (SLH-DSA) Migration to PQC With the release of the first three final PQC standards, organizations should begin migrating their systems to quantum-resistant cryptography. Cybersecurity products, services, and protocols will need updates, and organizations must identify where vulnerable algorithms are used and plan to replace or update them. Under the transition timeline in NIST IR 8547 , NIST will deprecate and ultimately remove quantum-vulnerable algorithms from its standards by 2035, with high-risk systems transitioning much earlier. The Migration to Post-Quantum Project at the National Cybersecurity Center of Excellence is working with industry, academia, and federal partners to accelerate this shift by demonstrating tools to find and prioritize vulnerable systems, supporting interoperable solutions, and developing migration guidance. Ongoing PQC Standardization Process NIST expects that the two digital signature standards (ML-DSA and SLH-DSA) and key-encapsulation mechanism standard (ML-KEM) will provide the foundation for most deployments of post-quantum cryptography. They can and should be put into use now. NIST continues to evaluate the security and performance of innovative algorithms in order to identify additional candidates for standardization. In addition to the three algorithms specified in the initial FIPS standards, the Falcon digital signature algorithm and HQC key encapsulation mechanism were selected for ongoing standardization; that process is underway. This process continues with a longer-term effort that solicited additional algorithms for digital signature schemes that could serve as a backup to ML-DSA or that could address unique use cases. Learn more on the Additional Digital Signature Schemes page. Project Links Overview FAQs News & Updates Events Publications Presentations Additional Pages PQC Standards Hash-Based Signatures IPR License Summary PQC Standardization Process Selected Algorithms Additional Digital Signature Schemes Workshops and Timeline PQC Seminars Contact Info Email List (PQC Forum) PQC Archive Contacts PQC Crypto Technical Inquiries [email protected] Dr. Dustin Moody Group Cryptographic Technology Topics Security and Privacy: post-quantum cryptography Related Projects Cryptographic Standards and Guidelines Hash-Based Signatures Migration to Post-Quantum Cryptography | NCCoE Multi-Party Threshold Cryptography PQC Digital Signature Schemes Additional Pages PQC Standards Hash-Based Signatures IPR License Summary PQC Standardization Process Selected Algorithms Additional Digital Signature Schemes Workshops and Timeline PQC Seminars Contact Info Email List (PQC Forum) PQC Archive Contacts PQC Crypto Technical Inquiries [email protected] Dr. Dustin Moody Group Cryptographic Technology Topics Security and Privacy: post-quantum cryptography Related Projects Cryptographic Standards and Guidelines Hash-Based Signatures Migration to Post-Quantum Cryptography | NCCoE Multi-Party Threshold Cryptography PQC Digital Signature Schemes Created January 03, 2017 , Updated August 05, 2026"
+    },
+    "https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization/selected-algorithms": {
+      "sha256": "79df82ae675022637a1604c81c7db2a07eec0caf9f56a2f5c43c46ab1278de03",
+      "checked": "2026-09-08",
+      "text": "You are viewing this page in an unauthorized frame window. This is a potential security issue, you are being redirected to https://csrc.nist.gov . Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( Lock Locked padlock icon ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites. Information Technology Laboratory Computer Security Resource Center Projects Post-Quantum Cryptography PQC Standardization Process Post-Quantum Cryptography PQC Share to Facebook Share to X Share to LinkedIn Share ia Email Project Links Overview FAQs News & Updates Events Publications Presentations Selected Algorithms Official comments on the Selected Algorithms should be submitted using the \"Submit Comment\" link for the appropriate algorithm. Comments from the pqc-forum Google group subscribers will also be forwarded to the pqc-forum Google group list. We will periodically post and update the comments received to the appropriate algorithm. All relevant comments will be posted in their entirety and should not include PII information in the body of the email message. Please refrain from using OFFICIAL COMMENT to ask administrative questions, which should be sent to [email protected] July 2022: The rationale for choosing the selected algorithms for standardization is described in NIST IR 8413 , Status Report on the Third Round of the NIST Post-Quantum Cryptography Standardization Process March 2025: The rationale for choosing the HQC algorithm for standardization is described in NIST IR 8545, Status Report on the Fourth Round of the NIST Post-Quantum Cryptography Standardization Process . History of Selected Algorithms Updates Selected Algorithms: Key-Encapsulation Mechansims Algorithm Algorithm Information Submitters Comments CRYSTALS-K YBER (2022) FIPS 203 PQC License Summary & Excerpts Zip File (7MB) IP Statements Website Peter Schwabe Roberto Avanzi Joppe Bos Leo Ducas Eike Kiltz Tancrede Lepoint Vadim Lyubashevsky John M. Schanck Gregor Seiler Damien Stehle Jintai Ding Submit Comment View Comments HQC (2025) FIPS coming soon. Zip File (13MB) Website IP Statements Philippe Gaborit Carlos Aguilar Melchor Nicolas Aragon Slim Bettaieb Loïc Bidoux Olivier Blazy Jean-Christophe Deneuville Edoardo Persichetti Gilles Zémor Jurjen Bos Arnaud Dion Jerome Lacan Jean-Marc Robert Pascal Veron Paulo Barreto Shay Gueron Tim Güneysu Rafael Misoczki Nicolas Sendrier Jean-Pierre Tillich Valentin Vasseur Santosh Ghosh Jan Richter-Brockmann Submit Comment View Comments Selected Algorithms: Digital Signature Algorithms Algorithm Algorithm Information Submitters Comments CRYSTALS-DILITHIUM (2022) FIPS 204 Zip File (11MB) IP Statements Website Vadim Lyubashevsky Leo Ducas Eike Kiltz Tancrede Lepoint Peter Schwabe Gregor Seiler Damien Stehle Shi Bai Submit Comment View Comments F ALCON (2022) FIPS coming soon Zip File (4MB) IP Statements Website Thomas Prest Pierre-Alain Fouque Jeffrey Hoffstein Paul Kirchner Vadim Lyubashevsky Thomas Pornin Thomas Ricosset Gregor Seiler William Whyte Zhenfei Zhang Submit Comment View Comments SPHINCS+ (2022) FIPS 205 Zip File (230MB) IP Statements Website Andreas Hulsing Daniel J. Bernstein Christoph Dobraunig Maria Eichlseder Scott Fluhrer Stefan-Lukas Gazdag Panos Kampanakis Stefan Kolbl Tanja Lange Martin M Lauridsen Florian Mendel Ruben Niederhagen Christian Rechberger Joost Rijneveld Peter Schwabe Jean-Philippe Aumasson Bas Westerbaan Ward Beullens Submit Comment View Comments Project Links Overview FAQs News & Updates Events Publications Presentations Additional Pages PQC Standards Hash-Based Signatures IPR License Summary PQC Standardization Process Selected Algorithms Additional Digital Signature Schemes Workshops and Timeline PQC Seminars Contact Info Email List (PQC Forum) PQC Archive Contacts PQC Crypto Technical Inquiries [email protected] Dr. Dustin Moody Group Cryptographic Technology Topics Security and Privacy: post-quantum cryptography Related Projects Cryptographic Standards and Guidelines Hash-Based Signatures Migration to Post-Quantum Cryptography | NCCoE Multi-Party Threshold Cryptography PQC Digital Signature Schemes Additional Pages PQC Standards Hash-Based Signatures IPR License Summary PQC Standardization Process Selected Algorithms Additional Digital Signature Schemes Workshops and Timeline PQC Seminars Contact Info Email List (PQC Forum) PQC Archive Contacts PQC Crypto Technical Inquiries [email protected] Dr. Dustin Moody Group Cryptographic Technology Topics Security and Privacy: post-quantum cryptography Related Projects Cryptographic Standards and Guidelines Hash-Based Signatures Migration to Post-Quantum Cryptography | NCCoE Multi-Party Threshold Cryptography PQC Digital Signature Schemes Created January 03, 2017 , Updated August 05, 2026"
+    },
+    "https://csrc.nist.gov/projects/pqc-dig-sig/round-3-additional-signatures": {
+      "sha256": "93635d91c5da6095c41d7ec258fbd376538b17a9d3437b3313aae0dc14fabd2a",
+      "checked": "2026-09-08",
+      "text": "You are viewing this page in an unauthorized frame window. This is a potential security issue, you are being redirected to https://csrc.nist.gov . Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( Lock Locked padlock icon ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites. Information Technology Laboratory Computer Security Resource Center Projects PQC Digital Signature Schemes Post-Quantum Cryptography: Additional Digital Signature Schemes Share to Facebook Share to X Share to LinkedIn Share ia Email Project Links Overview News & Updates Publications Round 3 Additional Signatures Official comments on the Third Round Candidates should be submitted using the \"Submit Comment\" link for the appropriate algorithm. Comments from the pqc-forum Google group subscribers will also be forwarded to the pqc-forum Google group list. We will periodically post and update the comments received to the appropriate algorithm. All relevant comments will be posted in their entirety and should not include PII information in the body of the email message. Please refrain from using OFFICIAL COMMENT to ask administrative questions, which should be sent to [email protected] . The rationale for choosing the Round 3 Candidates is described in NIST IR 8610 , Status Report on the Second Round of the Additional Digital Signature Schemes for the NIST Post-Quantum Cryptography Standardization Process. The 9 candidates that will be in the 3rd round are: Isogeny Signatures Algorithm Algorithm Information Submitters Comments SQIsign Website Marius A. Aardal Gora Adj Diego F. Aranha Andrea Basso Isaac Andrés Canales Martínez Jorge Chávez-Saab Maria Corte-Real Santos Pierrick Dartois Luca De Feo Max Duparc Jonathan Komada Eriksen Tako Boris Fouotsa Décio Luiz Gazzoni Filho Basil Hess David Kohel Antonin Leroux Patrick Longa Luciano Maino Michael Meyer Kohei Nakagawa Hiroshi Onuki Lorenz Panny Sikhar Patranabis Christophe Petit Giacomo Pope Krijn Reijnders Damien Robert Francisco Rodríguez Henríquez Sina Schaeffler Benjamin Wesolowski Submit Comment Lattice-based Signatures Algorithm Algorithm Information Submitters Comments HAWK The submission team has withdrawn HAWK from the additional digital signatures standardization process. Website Joppe W. Bos Olivier Bronchain Léo Ducas Serge Fehr Yu-Hsuan Huang Thomas Pornin Eamonn W. Postlethwaite Thomas Prest Ludo N. Pulles Wessel van Woerden Submit Comment MPC-in-the-Head Signatures Algorithm Algorithm Information Submitters Comments MQOM MQ on my Mind Website Ryad Benadjila Charles Bouillaguet Thibauld Feneuil Matthieu Rivain Submit Comment SDitH Syndrome Decoding in the Head Website Carlos Aguilar Melchor Slim Bettaieb Loïc BidouxThibauld Feneuil Philippe Gaborit Nicolas Gama Shay Gueron James Howe Andreas Hülsing David Joseph Antoine Joux Mukul Kulkarni Edoardo Persichetti Tovohery H. Randrianarisoa Matthieu Rivain Dongze Yue Submit Comment Multivariate Signatures Algorithm Algorithm Information Submitters Comments MAYO Website Ward Beullens Fabio Campos Sofía Celi Basil Hess Matthias J. Kannwischer Submit Comment QR-UOV Website Rika Akiyama Hiroki Furue Yasuhiko Ikematsu Fumitaka Hoshino Koha Kinjo Haruhisa Kosuge Satoshi Nakamura Shingo Orihara Tsuyoshi Takagi Kimihiro Yamakoshi Submit Comment SNOVA Website Lih-Chung Wang Chun-Yen Chou Jintai Ding Yen-Liang Kuan Jan Adriaan Leegwater Ming-Siou LiBo-Shu Tseng Po-En Tseng Chia-Chun Wang Submit Comment UOV Unbalanced Oil and Vinegar Website Ward Beullens Ming-Shing Chen Jintai Ding Boru Gong Matthias J. Kannwischer Jacques Patarin Bo-Yuan Peng Dieter Schmidt Cheng-Jhih Shih Chengdong Tao Bo-Yin Yang Submit Comment Symmetric-based Signatures Algorithm Algorithm Information Submitters Comments FAEST Website Carsten Baum Lennart Braun Ward Beullens Cyprien Delpech de Saint Guilhem Michael Klooß Christian Majenz Shibam Mukherjee Emmanuela Orsini Sebastian Ramacher Christian Rechberger Lawrence Roy Peter Scholl Submit Comment Project Links Overview News & Updates Publications Additional Pages Standardization of Additional Digital Signature Schemes Call for Proposals Example Files Workshops and Timeline Round 1 Additional Signatures Round 2 Additional Signatures Round 3 Additional Signatures Email List (PQC Forum) PQC Standardization: Main Project Contacts PQC Crypto Technical Inquiries [email protected] Dr. Lily Chen Dr. Dustin Moody Dr. Yi-Kai Liu Group Cryptographic Technology Topics Security and Privacy: digital signatures , post-quantum cryptography Related Projects Hash-Based Signatures Migration to Post-Quantum Cryptography | NCCoE Post-Quantum Cryptography Additional Pages Standardization of Additional Digital Signature Schemes Call for Proposals Example Files Workshops and Timeline Round 1 Additional Signatures Round 2 Additional Signatures Round 3 Additional Signatures Email List (PQC Forum) PQC Standardization: Main Project Contacts PQC Crypto Technical Inquiries [email protected] Dr. Lily Chen Dr. Dustin Moody Dr. Yi-Kai Liu Group Cryptographic Technology Topics Security and Privacy: digital signatures , post-quantum cryptography Related Projects Hash-Based Signatures Migration to Post-Quantum Cryptography | NCCoE Post-Quantum Cryptography Created August 29, 2022 , Updated July 29, 2026"
+    },
+    "https://csrc.nist.gov/Projects/post-quantum-cryptography/workshops-and-timeline": {
+      "sha256": "97c423a3a71fea7221de143a061c5e9db45b18d0c5bcbd37c5a9509545e46060",
+      "checked": "2026-09-08",
+      "text": "You are viewing this page in an unauthorized frame window. This is a potential security issue, you are being redirected to https://csrc.nist.gov . Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( Lock Locked padlock icon ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites. Information Technology Laboratory Computer Security Resource Center Projects Post-Quantum Cryptography Post-Quantum Cryptography PQC Share to Facebook Share to X Share to LinkedIn Share ia Email Project Links Overview FAQs News & Updates Events Publications Presentations Workshops and Timeline Workshops Date September 24-26, 2025 Sixth PQC Standardization Conference (In-Person / Virtual) Venue: NIST Gaithersburg, Maryland, USA Call for Papers April 10-12, 2024 Fifth PQC Standardization Conference (In-Person) Hilton Washington DC/Rockville Hotel Rockville, MD Call for Papers November 29- December 1, 2022 Fourth PQC Standardization Conference Virtual Call for Papers June 7-9, 2021 Third PQC Standardization Conference Virtual Call for Papers updated 2/3/2021 August 22-24, 2019 Second PQC Standardization Conference , co-located with Crypto 2019 University of California, Santa Barbara Santa Barbara, CA Call for Papers April 11-13, 2018 First PQC Standardization Conference , co-located with PQCrypto 2018 Pier Sixty-Six Hotel and Marina Fort Lauderdale, FL April 2-3, 2015 Workshop on Cybersecurity in a Post-Quantum World NIST Gaithersburg, MD Timeline *This is a tentative timeline, provided for information, and subject to change. Date Feb 24-26, 2016 NIST Presentation at PQCrypto 2016: Announcement and outline of NIST's Call for Submissions (Fall 2016) , Dustin Moody April 28, 2016 NIST releases NISTIR 8105, Report on Post-Quantum Cryptography Dec 20, 2016 Formal Call for Proposals Nov 30, 2017 Deadline for submissions Dec 4, 2017 NIST Presentation at AsiaCrypt 2017: The Ship Has Sailed: The NIST Post-Quantum Crypto \"Competition\" , Dustin Moody Dec 21, 2017 Round 1 algorithms announced (69 submissions accepted as \"complete and proper\") Apr 11, 2018 NIST Presentation at PQCrypto 2018: Let's Get Ready to Rumble - The NIST PQC \"Competition\" , Dustin Moody April 11-13, 2018 First PQC Standardization Conference - Submitter's Presentations January 30, 2019 Second Round Candidates announced (26 algorithms) March 15, 2019 Deadline for updated submission packages for the Second Round May 8-10, 2019 NIST Presentation at PQCrypto 2019: Round 2 of the NIST PQC \"Competition\" - What was NIST Thinking? (Spring 2019), Dustin Moody August 22-24, 2019 Second PQC Standardization Conference July 22, 2020 Third Round Candidates announced (7 Finalists and 8 Alternates) October 1, 2020 Deadline for updated submission packages for the Third Round June 7-9, 2021 Third PQC Standardization Conference July 5, 2022 Announcement of Candidates to be Standardized and Fourth Round Candidates October 1, 2022 Deadline for updated submission packages for the Fourth Round Nov 29-Dec 1, 2022 Fourth PQC Standardization Conference (Virtual) August 24, 2023 Three Draft FIPS released for public comment Draft FIPS 203, Module-Lattice-Based Key-Encapsulation Mechanism Standard Draft FIPS 204, Module-Lattice-Based Digital Signature Standard Draft FIPS 205, Stateless Hash-Based Digital Signature Standard April 10-12, 2024 Fifth PQC Standardization Conference August 13, 2024 Three FIPS published FIPS 203, Module-Lattice-Based Key-Encapsulation Mechanism Standard FIPS 204, Module-Lattice-Based Digital Signature Standard FIPS 205, Stateless Hash-Based Digital Signature Standard January 7, 2025 The initial public draft of NIST SP 800-227, Recommendations for Key-Encapsulation Mechanisms released for public comment. March 11, 2025 HQC was selected for standardization September 24-26, 2025 Sixth PQC Standardization Conference December 19, 2025 NIST Releases CSWP 39, Considerations for Achieving Cryptographic Agility: Strategies and Practices April 13. 2026 NIST Releases Initial Public Draft SP 800-230, Additional SLH-DSA Parameter Sets for Limited Signature Use Cases April 17, 2026 NIST Releases Initial Public Draft SP 800-133, Rev. 3, Recommendation for Cryptographic Key Generation May 14, 2026 NIST Releases IR 8610, Status Report on the Second Round of the Additional Digital Signature Schemes for the NIST Post-Quantum Cryptography Standardization Process Project Links Overview FAQs News & Updates Events Publications Presentations Additional Pages PQC Standards Hash-Based Signatures IPR License Summary PQC Standardization Process Selected Algorithms Additional Digital Signature Schemes Workshops and Timeline PQC Seminars Contact Info Email List (PQC Forum) PQC Archive Contacts PQC Crypto Technical Inquiries [email protected] Dr. Dustin Moody Group Cryptographic Technology Topics Security and Privacy: post-quantum cryptography Related Projects Cryptographic Standards and Guidelines Hash-Based Signatures Migration to Post-Quantum Cryptography | NCCoE Multi-Party Threshold Cryptography PQC Digital Signature Schemes Additional Pages PQC Standards Hash-Based Signatures IPR License Summary PQC Standardization Process Selected Algorithms Additional Digital Signature Schemes Workshops and Timeline PQC Seminars Contact Info Email List (PQC Forum) PQC Archive Contacts PQC Crypto Technical Inquiries [email protected] Dr. Dustin Moody Group Cryptographic Technology Topics Security and Privacy: post-quantum cryptography Related Projects Cryptographic Standards and Guidelines Hash-Based Signatures Migration to Post-Quantum Cryptography | NCCoE Multi-Party Threshold Cryptography PQC Digital Signature Schemes Created January 03, 2017 , Updated August 05, 2026"
+    }
+  },
+  "last_sent_week": "2026-W37",
+  "last_sent": "2026-09-08T16:58:07Z",
+  "last_run": "2026-09-08T16:58:07Z"
+}
