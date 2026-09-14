@@ -1,6 +1,6 @@
 # NIST Post-Quantum Cryptography – History Map
 
-_Auto-updated weekly. Last refresh: Sep 8, 2026. Every entry links to the original NIST page and document._
+_Auto-updated weekly. Last refresh: Sep 14, 2026. Every entry links to the original NIST page and document._
 
 ## Why this matters (the problem NIST set out to solve)
 
