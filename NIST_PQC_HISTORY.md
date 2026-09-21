@@ -1,6 +1,6 @@
 # NIST Post-Quantum Cryptography – History Map
 
-_Auto-updated weekly. Last refresh: Sep 14, 2026. Every entry links to the original NIST page and document._
+_Auto-updated weekly. Last refresh: Sep 21, 2026. Every entry links to the original NIST page and document._
 
 ## Why this matters (the problem NIST set out to solve)
 
@@ -8,7 +8,13 @@ Today's internet security (RSA, elliptic-curve crypto) relies on math problems t
 
 ## What changed this week
 
-No new NIST PQC announcements this week. Most recent item on record: **HAWK withdrawn from the additional-signatures race – 8 Round 3 candidates remain** (Jul 29, 2026).
+### Sep 21, 2026 – NIST updated its page: Additional signatures – Round 3 candidates
+
+The SQIsign entry now includes links to an IP Statement, Specifications, and a Zip file download. Several new submitters were added to the SQIsign team: Giacomo Borin, Thomas Espitau, Riccardo Invernizzi, Marzio Mula, Frederik Vercauteren, Alexandre Wallet, and Wessel van Woerden.
+
+**Why it matters:** The addition of specification documents and an IP statement for SQIsign makes it easier for the public and researchers to review and evaluate the algorithm. Expanding the submitter team may reflect ongoing development and broader collaboration on this isogeny-based signature scheme.
+
+- Original: <https://csrc.nist.gov/projects/pqc-dig-sig/round-3-additional-signatures>
 
 ## Where things stand right now
 
@@ -165,6 +171,12 @@ Links: [Announcement](https://csrc.nist.gov/News/2026/nist-advances-9-candidates
 NIST's Round 3 page now notes that the HAWK team has withdrawn their lattice-based signature scheme from the process (NIST's page was updated July 29, 2026; NIST did not post a dated news item). That leaves eight candidates: FAEST, MAYO, MQOM, QR-UOV, SDitH, SNOVA, SQIsign and UOV – all built on non-lattice math, which is exactly the diversity NIST wanted from this track.
 
 Links: [Round 3 candidates page (see HAWK note)](https://csrc.nist.gov/projects/pqc-dig-sig/round-3-additional-signatures)
+
+#### Sep 21, 2026 – NIST updated its page: Additional signatures – Round 3 candidates _(auto-added)_
+
+The SQIsign entry now includes links to an IP Statement, Specifications, and a Zip file download. Several new submitters were added to the SQIsign team: Giacomo Borin, Thomas Espitau, Riccardo Invernizzi, Marzio Mula, Frederik Vercauteren, Alexandre Wallet, and Wessel van Woerden. Why it matters: The addition of specification documents and an IP statement for SQIsign makes it easier for the public and researchers to review and evaluate the algorithm. Expanding the submitter team may reflect ongoing development and broader collaboration on this isogeny-based signature scheme.
+
+Links: [NIST announcement](https://csrc.nist.gov/projects/pqc-dig-sig/round-3-additional-signatures)
 
 ## What NIST has said is coming next
 

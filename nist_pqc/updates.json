@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "date": "2026-09-21",
+    "title": "NIST updated its page: Additional signatures – Round 3 candidates",
+    "url": "https://csrc.nist.gov/projects/pqc-dig-sig/round-3-additional-signatures",
+    "source": "NIST page-change monitor",
+    "summary": "The SQIsign entry now includes links to an IP Statement, Specifications, and a Zip file download. Several new submitters were added to the SQIsign team: Giacomo Borin, Thomas Espitau, Riccardo Invernizzi, Marzio Mula, Frederik Vercauteren, Alexandre Wallet, and Wessel van Woerden.",
+    "why_it_matters": "The addition of specification documents and an IP statement for SQIsign makes it easier for the public and researchers to review and evaluate the algorithm. Expanding the submitter team may reflect ongoing development and broader collaboration on this isogeny-based signature scheme.",
+    "links": [],
+    "first_seen": "2026-09-21",
+    "kind": "page"
+  }
+]
