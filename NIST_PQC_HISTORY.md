@@ -1,6 +1,6 @@
 # NIST Post-Quantum Cryptography – History Map
 
-_Auto-updated weekly. Last refresh: Sep 21, 2026. Every entry links to the original NIST page and document._
+_Auto-updated weekly. Last refresh: Sep 28, 2026. Every entry links to the original NIST page and document._
 
 ## Why this matters (the problem NIST set out to solve)
 
@@ -8,11 +8,9 @@ Today's internet security (RSA, elliptic-curve crypto) relies on math problems t
 
 ## What changed this week
 
-### Sep 21, 2026 – NIST updated its page: Additional signatures – Round 3 candidates
+### Sep 28, 2026 – NIST updated its page: Additional signatures – Round 3 candidates
 
-The SQIsign entry now includes links to an IP Statement, Specifications, and a Zip file download. Several new submitters were added to the SQIsign team: Giacomo Borin, Thomas Espitau, Riccardo Invernizzi, Marzio Mula, Frederik Vercauteren, Alexandre Wallet, and Wessel van Woerden.
-
-**Why it matters:** The addition of specification documents and an IP statement for SQIsign makes it easier for the public and researchers to review and evaluate the algorithm. Expanding the submitter team may reflect ongoing development and broader collaboration on this isogeny-based signature scheme.
+Two small edits were made: a contributor's name in the SNOVA candidate was corrected from 'LiBo-Shu Tseng' to 'Bo-Shu Tseng', and the page's last-updated date changed from September 21, 2026 to September 28, 2026.
 
 - Original: <https://csrc.nist.gov/projects/pqc-dig-sig/round-3-additional-signatures>
 
