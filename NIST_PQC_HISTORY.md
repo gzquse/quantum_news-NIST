@@ -1,6 +1,6 @@
 # NIST Post-Quantum Cryptography – History Map
 
-_Auto-updated weekly. Last refresh: Oct 12, 2026. Every entry links to the original NIST page and document._
+_Auto-updated weekly. Last refresh: Oct 19, 2026. Every entry links to the original NIST page and document._
 
 ## Why this matters (the problem NIST set out to solve)
 
@@ -8,7 +8,13 @@ Today's internet security (RSA, elliptic-curve crypto) relies on math problems t
 
 ## What changed this week
 
-No new NIST PQC announcements this week. Most recent item on record: **NIST updated its page: Additional signatures – Round 3 candidates** (Sep 21, 2026).
+### Oct 19, 2026 – NIST updated its page: Additional signatures – Round 3 candidates
+
+A contributor's name was corrected from 'Hiroshi Amagasi' to 'Hiroshi Amagasa', two duplicate lines listing 'Lily Chen Dr.' were removed, and the page's last-updated date changed from September 28, 2026 to October 13, 2026.
+
+**Why it matters:** These are minor administrative corrections with no impact on the cryptographic standards or candidates under review.
+
+- Original: <https://csrc.nist.gov/projects/pqc-dig-sig/round-3-additional-signatures>
 
 ## Where things stand right now
 
