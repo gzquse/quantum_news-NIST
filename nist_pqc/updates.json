@@ -9,5 +9,47 @@
     "links": [],
     "first_seen": "2026-09-21",
     "kind": "page"
+  },
+  {
+    "date": "2026-10-27",
+    "title": "Transition to PQC Standards | NIST IR 8547",
+    "url": "https://csrc.nist.gov/News/2026/transition-to-pqc-standards-nist-ir-8547",
+    "source": "NIST PQC project news",
+    "summary": "NIST released a report called NIST IR 8547 on October 27, 2026, laying out its official road map for switching from today's encryption methods — which a future quantum computer could break — to the new quantum-resistant standards the agency finalized in August 2024. The report tells federal agencies, businesses, and standards bodies what needs to change and by when.",
+    "why_it_matters": "This road map gives organizations a concrete timeline to follow, making it easier to plan and prioritize the switch to quantum-safe encryption before powerful quantum computers potentially arrive and render current security obsolete.",
+    "links": [
+      {
+        "label": "Transition to Post-Quantum Cryptography Standards",
+        "url": "https://csrc.nist.gov/pubs/ir/8547/final"
+      },
+      {
+        "label": "Post-Quantum Cryptography",
+        "url": "https://csrc.nist.gov/Projects/post-quantum-cryptography"
+      }
+    ],
+    "first_seen": "2026-11-02",
+    "kind": "news"
+  },
+  {
+    "date": "2026-11-02",
+    "title": "NIST updated its page: Selected algorithms (FIPS status table)",
+    "url": "https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization/selected-algorithms",
+    "source": "NIST page-change monitor",
+    "summary": "The 'last updated' date on the Selected Algorithms page changed from August 05, 2026 to October 27, 2026, indicating the page was recently refreshed.",
+    "why_it_matters": "",
+    "links": [],
+    "first_seen": "2026-11-02",
+    "kind": "page"
+  },
+  {
+    "date": "2026-11-02",
+    "title": "NIST updated its page: PQC workshops & timeline",
+    "url": "https://csrc.nist.gov/Projects/post-quantum-cryptography/workshops-and-timeline",
+    "source": "NIST page-change monitor",
+    "summary": "The 'last updated' date on the PQC Workshops & Timeline page changed from August 05, 2026 to October 27, 2026, indicating the page was recently updated.",
+    "why_it_matters": "This suggests NIST made some update to the workshops and timeline content in late October 2026, though the diff does not reveal what specific content changed.",
+    "links": [],
+    "first_seen": "2026-11-02",
+    "kind": "page"
   }
 ]

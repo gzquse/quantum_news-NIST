@@ -1,6 +1,6 @@
 # NIST Post-Quantum Cryptography – History Map
 
-_Auto-updated weekly. Last refresh: Oct 26, 2026. Every entry links to the original NIST page and document._
+_Auto-updated weekly. Last refresh: Nov 2, 2026. Every entry links to the original NIST page and document._
 
 ## Why this matters (the problem NIST set out to solve)
 
@@ -8,7 +8,29 @@ Today's internet security (RSA, elliptic-curve crypto) relies on math problems t
 
 ## What changed this week
 
-No new NIST PQC announcements this week. Most recent item on record: **NIST updated its page: Additional signatures – Round 3 candidates** (Sep 21, 2026).
+### Nov 2, 2026 – NIST updated its page: Selected algorithms (FIPS status table)
+
+The 'last updated' date on the Selected Algorithms page changed from August 05, 2026 to October 27, 2026, indicating the page was recently refreshed.
+
+- Original: <https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization/selected-algorithms>
+
+### Nov 2, 2026 – NIST updated its page: PQC workshops & timeline
+
+The 'last updated' date on the PQC Workshops & Timeline page changed from August 05, 2026 to October 27, 2026, indicating the page was recently updated.
+
+**Why it matters:** This suggests NIST made some update to the workshops and timeline content in late October 2026, though the diff does not reveal what specific content changed.
+
+- Original: <https://csrc.nist.gov/Projects/post-quantum-cryptography/workshops-and-timeline>
+
+### Oct 27, 2026 – Transition to PQC Standards | NIST IR 8547
+
+NIST released a report called NIST IR 8547 on October 27, 2026, laying out its official road map for switching from today's encryption methods — which a future quantum computer could break — to the new quantum-resistant standards the agency finalized in August 2024. The report tells federal agencies, businesses, and standards bodies what needs to change and by when.
+
+**Why it matters:** This road map gives organizations a concrete timeline to follow, making it easier to plan and prioritize the switch to quantum-safe encryption before powerful quantum computers potentially arrive and render current security obsolete.
+
+- Original: <https://csrc.nist.gov/News/2026/transition-to-pqc-standards-nist-ir-8547>
+- Transition to Post-Quantum Cryptography Standards: <https://csrc.nist.gov/pubs/ir/8547/final>
+- Post-Quantum Cryptography: <https://csrc.nist.gov/Projects/post-quantum-cryptography>
 
 ## Where things stand right now
 
@@ -19,7 +41,7 @@ No new NIST PQC announcements this week. Most recent item on record: **NIST upda
 | FIPS 205 – SLH-DSA (backup signatures, from SPHINCS+) | Final standard | Aug 13, 2024 | [NIST](https://csrc.nist.gov/pubs/fips/205/final) |
 | FIPS 206 – FN-DSA (compact signatures, from Falcon) | Selected 2022; standard still pending – NIST lists it as 'FIPS coming soon' | Jul 5, 2022 | [NIST](https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization/selected-algorithms) |
 | HQC (backup encryption / KEM) | Selected March 2025; draft standard pending, final expected ~2027 | Mar 11, 2025 | [NIST](https://csrc.nist.gov/News/2025/hqc-announced-as-a-4th-round-selection) |
-| NIST IR 8547 – transition timeline (2030 deprecate / 2035 disallow) | Draft only (Nov 2024); final not yet published | Nov 12, 2024 | [NIST](https://csrc.nist.gov/pubs/ir/8547/ipd) |
+| NIST IR 8547 – transition timeline (2030 deprecate / 2035 disallow) | Draft only (Nov 2024); final not yet published — UPDATE: Final NIST IR 8547 transition timeline is now live | Nov 12, 2024 | [NIST](https://csrc.nist.gov/pubs/ir/8547/final) |
 | SP 800-227 – KEM usage guidance | Final | Sep 18, 2025 | [NIST](https://csrc.nist.gov/pubs/sp/800/227/final) |
 | SP 800-230 – extra SLH-DSA parameter sets | Draft; comments closed June 2026 | Apr 13, 2026 | [NIST](https://csrc.nist.gov/pubs/sp/800/230/ipd) |
 | Additional signature schemes | Round 3 – 9 advanced May 2026, HAWK since withdrawn (8 remain); ~2 years of evaluation | Jul 29, 2026 | [NIST](https://csrc.nist.gov/projects/pqc-dig-sig/round-3-additional-signatures) |
@@ -171,6 +193,24 @@ Links: [Round 3 candidates page (see HAWK note)](https://csrc.nist.gov/projects/
 The SQIsign entry now includes links to an IP Statement, Specifications, and a Zip file download. Several new submitters were added to the SQIsign team: Giacomo Borin, Thomas Espitau, Riccardo Invernizzi, Marzio Mula, Frederik Vercauteren, Alexandre Wallet, and Wessel van Woerden. Why it matters: The addition of specification documents and an IP statement for SQIsign makes it easier for the public and researchers to review and evaluate the algorithm. Expanding the submitter team may reflect ongoing development and broader collaboration on this isogeny-based signature scheme.
 
 Links: [NIST announcement](https://csrc.nist.gov/projects/pqc-dig-sig/round-3-additional-signatures)
+
+#### Oct 27, 2026 – Transition to PQC Standards | NIST IR 8547 _(auto-added)_
+
+NIST released a report called NIST IR 8547 on October 27, 2026, laying out its official road map for switching from today's encryption methods — which a future quantum computer could break — to the new quantum-resistant standards the agency finalized in August 2024. The report tells federal agencies, businesses, and standards bodies what needs to change and by when. Why it matters: This road map gives organizations a concrete timeline to follow, making it easier to plan and prioritize the switch to quantum-safe encryption before powerful quantum computers potentially arrive and render current security obsolete.
+
+Links: [NIST announcement](https://csrc.nist.gov/News/2026/transition-to-pqc-standards-nist-ir-8547) · [Transition to Post-Quantum Cryptography Standards](https://csrc.nist.gov/pubs/ir/8547/final) · [Post-Quantum Cryptography](https://csrc.nist.gov/Projects/post-quantum-cryptography)
+
+#### Nov 2, 2026 – NIST updated its page: Selected algorithms (FIPS status table) _(auto-added)_
+
+The 'last updated' date on the Selected Algorithms page changed from August 05, 2026 to October 27, 2026, indicating the page was recently refreshed.
+
+Links: [NIST announcement](https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization/selected-algorithms)
+
+#### Nov 2, 2026 – NIST updated its page: PQC workshops & timeline _(auto-added)_
+
+The 'last updated' date on the PQC Workshops & Timeline page changed from August 05, 2026 to October 27, 2026, indicating the page was recently updated. Why it matters: This suggests NIST made some update to the workshops and timeline content in late October 2026, though the diff does not reveal what specific content changed.
+
+Links: [NIST announcement](https://csrc.nist.gov/Projects/post-quantum-cryptography/workshops-and-timeline)
 
 ## What NIST has said is coming next
 
